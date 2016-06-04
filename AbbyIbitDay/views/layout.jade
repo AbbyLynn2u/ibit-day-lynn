@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/components/bootstrap/dist/css/bootstrap.css')
+    script(src="components/jquery/dist/jquery.js")
+    script(src="components/bootstrap/dist/js/bootstrap.js")
+    
+    // add in support for angular to code -- add before control.js
+    script(src="components/angular/angular.js")
+    script(src="components/angular-route/angular-route.js")
+    
+    script(src="javascripts/control.js")
+
+    // add in the loads for javascript for our other page
+    script(src="javascripts/about.js")
+    script(src="javascripts/first.js")
+    script(src="javascripts/home.js")
+  body
+    // name for our primary angular module
+    body(data-ng-app="elfApp")
+    block content

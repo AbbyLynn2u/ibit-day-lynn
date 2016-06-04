@@ -1,0 +1,19 @@
+.panel.panel-default
+    .panel-heading Renewable Data
+    .panel-body
+        div {{description}}  
+        
+elfApp.controller('FirstController', function($scope, $http) {
+    'use strict';
+
+    $scope.description = 'First Controller Description';
+
+    $scope.loadData = function() {
+        $http.get('Presidents.json')
+            .then(function(presidents) {
+                $scope.presidents = JSON.stringify(presidents, null, 4);
+            })
+    };
+
+    $scope.loadData();
+});
