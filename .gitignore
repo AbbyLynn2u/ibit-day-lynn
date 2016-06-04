@@ -3,6 +3,10 @@ logs
 *.log
 npm-debug.log*
 
+*.zip
+.c9
+.idea
+
 # Runtime data
 pids
 *.pid
